@@ -1,0 +1,171 @@
+@import 'reset.css';
+
+body {
+    height: 100vh;
+    background-color: #e7e5df;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-board {
+    width: 1200px;
+    height: 675px;
+    background: radial-gradient(ellipse, #c9c2ab 75%, #8d8a78 130%);
+    overflow: hidden;
+}
+
+.main-board .header {
+    margin: 24px 0;
+    padding: 30px 0;
+    padding-left: 39px;
+    /* border: 1px solid black; */
+    border-top: 2px solid #4c4840;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-board .header h1{
+    font-size: 35px;
+    color: #4c4840;
+    letter-spacing: 4px;
+    text-shadow: 5px 5px #9b9485;
+}
+
+.main-board .header h1::after{
+    content: "- Arcade: Training";
+    text-shadow: none;
+    font-size: 17.4px;
+    letter-spacing: 0;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+.main-board .header .decorates {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    color: #4c4840;
+}
+
+.main-board .header .decorates li {
+    width: 50.5px;
+    position: relative;
+}
+
+.main-board .header .decorates li .item1{
+    /* display: block; */
+    position: absolute;
+    top: -15px;
+    font-size: 28px;
+}
+
+.main-board .header .decorates li .item2{
+    /* display: block; */
+    position: absolute;
+    right: 12px;
+    top: 3px;
+    transform: rotateX(180deg);
+}
+
+.main-board .selector {
+    border: 1px solid black;
+    width: 360px;
+    height: 360px;
+    margin-left: 39px;
+    position: relative;
+}
+
+.main-board .selector .selection-bar {
+    width: 40.5px;
+}
+
+.main-board .selector .game-list {
+    /* border: 1px solid red; */
+    margin-left: 40.5px;
+    height: 360px;
+    background-color: #d6cfb5;
+    box-shadow: 2.3px 2.3px #9b947c;
+    padding: 0.1px;
+    
+}
+
+.main-board .selector .game-list ul{
+    height: 325px;
+    margin: 17px 0;
+    overflow: hidden;
+}
+
+.main-board .selector .game-list ul li{
+    letter-spacing: 1px;
+    height: 36.39px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+}
+
+.main-board .selector .game-list ul li span {
+    display: block;
+    margin: 9px 0;
+    color: #4c4840;
+    letter-spacing: 0.1px;
+}
+
+.main-board .selector .game-list ul li .item-list-block {
+    height: 16px;
+    width: 16px;
+    background-color: #4c4840;
+    margin: 9px;
+}
+
+
+.main-board .selector .line {
+    width: 276px;
+    height: 3px;
+    background-color: #b7b09a;
+    position: absolute;
+    right: 32.5px;
+}
+
+.main-board .selector .line.up {
+    top: 6.3px;
+}
+
+.main-board .selector .line.bottom{
+    bottom: 7.2px;
+}
+
+.main-board .selector .scroll {
+    height: 347px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 30.8px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-board .selector .scroll .bar {
+    height: 69px;
+    width: 2.8px;
+    background-color:  #4c4840;
+    position: absolute;
+    top: 11px;
+}
+
+.main-board .selector .scroll .dot {
+    height: 3.3px;
+    width: 2.8px;
+    background-color:  #4c4840;
+    position: absolute;
+}
+
+.main-board .selector .scroll .dot.up {
+    top: 0;
+}
+
+.main-board .selector .scroll .dot.bottom {
+    bottom: 0;
+}
