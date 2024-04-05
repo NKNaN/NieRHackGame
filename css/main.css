@@ -71,16 +71,74 @@ body {
 }
 
 .main-board .selector {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 360px;
     height: 360px;
     margin-left: 39px;
     position: relative;
+    margin-top: 45px;
 }
 
 .main-board .selector .selection-bar {
     width: 40.5px;
+    position: relative;
 }
+
+.main-board .selector .selection-bar .bar-line1 {
+    width: 9.6px;
+    height: 360px;
+    background-color: #b1ab95;
+    float: left;
+}
+
+.main-board .selector .selection-bar .bar-line2 {
+    width: 2.7px;
+    height: 360px;
+    background-color: #b1ab95;
+    /* border: 1px solid; */
+    float: left;
+    margin-left: 3.6px;
+}
+
+.main-board .selector .selection-bar .selection-pointer {
+    height: 12px;
+    width: 25px;
+    position: absolute;
+    left: 4px;
+    top: 28px;
+}
+
+.main-board .selector .selection-bar .selection-pointer .pointer {
+    height: 12px;
+    width: 25px;
+    background-color: #4c4840;
+    clip-path: polygon(30% 0%, 100% 50%, 30% 100%, 0% 50%);
+}
+
+.main-board .selector .selection-bar .selection-pointer .dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #4c4840;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.main-board .selector .selection-bar .selection-pointer .dot1 {
+    background-color: #c2bbaa;
+    left: 4.8px;
+    top: 4.4px;
+}
+
+.main-board .selector .selection-bar .selection-pointer .dot2 {
+    top: -3px;
+}
+
+.main-board .selector .selection-bar .selection-pointer .dot3 {
+    bottom: -3.3px;
+}
+
 
 .main-board .selector .game-list {
     /* border: 1px solid red; */
@@ -110,7 +168,12 @@ body {
     display: block;
     margin: 9px 0;
     color: #4c4840;
-    letter-spacing: 0.1px;
+    letter-spacing: -1.2px;
+    font-size: 19px;
+}
+
+.main-board .selector .game-list ul li span:nth-last-child(1){
+    margin-left: 8px;
 }
 
 .main-board .selector .game-list ul li .item-list-block {
@@ -168,4 +231,151 @@ body {
 
 .main-board .selector .scroll .dot.bottom {
     bottom: 0;
+}
+
+.main-board .footer {
+    width: 1200px;
+    height: 112px;
+    position: relative;
+    border-bottom: 2px solid #4c4840;
+    box-sizing: border-box;
+    padding-left: 39px;
+}
+
+.main-board .footer .foot-bar {
+    width: 1120.5px;
+    height: 48.5px;
+    /* border: 1px solid; */
+    position: absolute;
+    top: 43.5px;
+    background-color: #d6cfb5;
+    box-shadow: 2.3px 2.3px #9b947c;
+}
+
+.main-board .footer .foot-bar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #4c4840;
+    right: 7px;
+    bottom: 4px;
+}
+
+.main-board .footer .foot-bar p {
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 48.5px;
+    font-size: 20px;
+    font-family: monospace;
+    color:#3a382d;
+    letter-spacing: -0.4px;
+    font-weight: bold;
+}
+
+
+.main-board .footer .foot-bar .bar-line1 {
+    width: 9.6px;
+    height: 48.5px;
+    background-color: #4c4840;
+    float: left;
+}
+
+.main-board .footer .foot-bar .bar-line2 {
+    width: 2.7px;
+    height: 48.5px;
+    background-color: #4c4840;
+    float: left;
+    margin-left: 3.6px;
+}
+
+.main-board .footer .foot-bar .option-icons {
+    height: 48.5px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid; */
+}
+
+.main-board .footer .foot-bar .option-icons div {
+    margin: 0 12px;
+    line-height: 48.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: monospace;
+    letter-spacing: -0.2px;
+    font-weight: bold;
+}
+
+.main-board .footer .foot-bar .option-icons .select-icon .block {
+    height: 14.8px;
+    width: 14.8px;
+    background-color: #4c4840;
+    color: #c2bbaa;
+    font-size: 15px;
+    font-family: auto;
+    border-radius: 1.5px;
+    box-shadow: 0.9px 0.9px 0.7px #4c4840;
+    margin-left: -1px;
+} 
+
+.main-board .footer .foot-bar .option-icons .confirm-icon .block {
+    height: 14.8px;
+    width: 29.1px;
+    background-color: #4c4840;
+    color: #c2bbaa;
+    font-size: 8.9px;
+    font-family: auto;
+    border-radius: 1.5px;
+    box-shadow: 0.9px 0.9px 0.7px #4c4840;
+    margin-left: -1px;
+}
+
+.main-board .footer .foot-bar .option-icons .back-icon .block {
+    height: 14.8px;
+    width: 29.1px;
+    background-color: #4c4840;
+    color: #c2bbaa;
+    font-size: 10px;
+    font-family: auto;
+    border-radius: 1.5px;
+    box-shadow: 0.9px 0.9px 0.7px #4c4840;
+    margin-left: -1px;
+}
+
+.main-board .footer .foot-bar .option-icons .select-icon .content,
+.main-board .footer .foot-bar .option-icons .confirm-icon .content,
+.main-board .footer .foot-bar .option-icons .back-icon .content {
+    margin-left: -1px;
+}
+
+.main-board .footer .decorates {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0px;
+    color: #4c4840;
+}
+
+.main-board .footer .decorates li {
+    width: 50.5px;
+    position: relative;
+}
+
+.main-board .footer .decorates li .item1{
+    /* display: block; */
+    position: absolute;
+    top: -13.5px;
+    font-size: 28px;
+}
+
+.main-board .footer .decorates li .item2{
+    /* display: block; */
+    position: absolute;
+    right: 12px;
+    top: 3px;
+    transform: rotateX(180deg);
 }
